@@ -1,20 +1,20 @@
-# Acessibilidade
+# Accessibility
 
-O Front-end Konvert busca tornar documentação, exemplos, relatórios e ferramentas utilizáveis por pessoas com diferentes necessidades e formas de interação.
+Front-end Konvert aims to make its documentation, examples, reports, and tools usable by people with different needs and interaction methods.
 
-## Compromissos
+## Commitments
 
-- linguagem clara e estrutura previsível;
-- títulos, listas, tabelas e links com significado no contexto;
-- fluxos que considerem teclado, foco visível, zoom, reflow e movimento reduzido;
-- orientação para avaliar contraste, nomes acessíveis e alvos de toque;
-- distinção entre verificações automatizadas e avaliação humana;
-- ausência de afirmações de conformidade sem evidência suficiente.
+- clear language and predictable structure;
+- meaningful headings, lists, tables, and link text;
+- workflows that consider keyboard use, visible focus, zoom, reflow, and reduced motion;
+- guidance for reviewing contrast, accessible names, and touch target sizes;
+- a clear distinction between automated checks and human evaluation;
+- no claims of conformance without sufficient evidence.
 
-## Limitações conhecidas
+## Known limitations
 
-As skills ajudam a encontrar barreiras, mas não substituem testes com pessoas com deficiência nem uma auditoria formal de conformidade. Ferramentas automáticas cobrem apenas parte dos problemas possíveis.
+These skills can help identify barriers, but they do not replace testing with people with disabilities or a formal conformance audit. Automated tools cover only a subset of possible accessibility problems.
 
-## Relatar uma barreira
+## Reporting a barrier
 
-Abra uma issue usando o template de problema e informe o arquivo, fluxo ou conteúdo afetado. Descreva a barreira, a tecnologia assistiva ou forma de navegação utilizada quando isso for relevante e o resultado esperado. Não inclua dados pessoais desnecessários.
+Open an issue using the bug report template and identify the affected file, flow, or content. Describe the barrier, the assistive technology or navigation method when relevant, and the expected result. Do not include unnecessary personal information.

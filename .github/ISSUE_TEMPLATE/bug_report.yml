@@ -1,64 +1,64 @@
-name: Relatar um problema
-description: Informe um comportamento incorreto ou uma falha reproduzível.
+name: Report a bug
+description: Report incorrect behavior or a reproducible failure.
 title: "[Bug]: "
 labels:
   - bug
 body:
   - type: markdown
     attributes:
-      value: Obrigado por ajudar a melhorar o Front-end Konvert. Não inclua credenciais ou dados pessoais.
+      value: Thank you for helping improve Front-end Konvert. Do not include credentials or personal data.
   - type: dropdown
     id: component
     attributes:
-      label: Componente
+      label: Component
       options:
         - audit-frontend-designer-konvert
         - create-frontend-from-zero-konvert
         - design-por-referencia-konvert
-        - Documentação ou comunidade
-        - Outro
+        - Documentation or community files
+        - Other
     validations:
       required: true
   - type: textarea
     id: problem
     attributes:
-      label: Problema
-      description: Explique o que aconteceu e por que o resultado parece incorreto.
+      label: Problem
+      description: Explain what happened and why the result appears incorrect.
     validations:
       required: true
   - type: textarea
     id: reproduction
     attributes:
-      label: Como reproduzir
-      description: Use um exemplo mínimo e dados sintéticos.
+      label: Reproduction steps
+      description: Use a minimal example and synthetic data.
       placeholder: |
-        1. Execute...
-        2. Informe...
+        1. Run...
+        2. Provide...
         3. Observe...
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Resultado esperado
+      label: Expected result
     validations:
       required: true
   - type: input
     id: environment
     attributes:
-      label: Ambiente
-      description: Sistema operacional, versão do Node.js e agente utilizado, quando aplicável.
+      label: Environment
+      description: Operating system, Node.js version, and agent when applicable.
   - type: textarea
     id: evidence
     attributes:
-      label: Evidências revisadas
-      description: Inclua logs ou imagens somente após remover dados privados.
+      label: Reviewed evidence
+      description: Include logs or images only after removing private information.
   - type: checkboxes
     id: checks
     attributes:
-      label: Confirmações
+      label: Confirmation
       options:
-        - label: Procurei issues existentes sobre o mesmo problema.
+        - label: I searched for existing issues about the same problem.
           required: true
-        - label: Removi credenciais e dados pessoais do relato.
+        - label: I removed credentials and personal data from this report.
           required: true

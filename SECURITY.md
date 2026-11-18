@@ -1,23 +1,23 @@
-# Política de Segurança
+# Security Policy
 
-## Versões com suporte
+## Supported versions
 
-O desenvolvimento ocorre na branch `main`. Correções de segurança são aplicadas à versão mais recente disponível nessa branch.
+Development takes place on the `main` branch. Security fixes are applied to the latest version available on that branch.
 
-## Como relatar uma vulnerabilidade
+## Reporting a vulnerability
 
-Use **Report a vulnerability** na aba **Security** do repositório para abrir um aviso privado no GitHub. Não publique vulnerabilidades, credenciais, dados pessoais ou detalhes que facilitem exploração em issues públicas.
+Use **Report a vulnerability** in the repository's **Security** tab to open a private GitHub security advisory. Do not disclose vulnerabilities, credentials, personal data, or details that could enable exploitation in public issues.
 
-Inclua, quando possível:
+Include the following information when possible:
 
-- componente e arquivo afetados;
-- impacto observado ou provável;
-- passos mínimos para reprodução com dados sintéticos;
-- ambiente e versão utilizados;
-- sugestão de correção, caso exista.
+- affected component and file;
+- observed or potential impact;
+- minimal reproduction steps using synthetic data;
+- environment and version;
+- a suggested fix, if available.
 
-O recebimento será confirmado assim que possível. A análise considerará impacto, reprodutibilidade e alcance. Atualizações serão compartilhadas pelo próprio aviso privado até a correção ou encerramento justificado.
+Receipt will be acknowledged as soon as possible. Triage will consider impact, reproducibility, and scope. Updates will be shared through the private advisory until the issue is fixed or closed with an explanation.
 
-## Escopo
+## Scope
 
-São especialmente relevantes falhas que possam expor dados, contornar os limites de rede, permitir escrita não autorizada, vazar conteúdo de capturas ou introduzir execução inesperada nos scripts. Problemas gerais de UX ou documentação devem usar os templates públicos de issue.
+Relevant reports include flaws that could expose data, bypass network boundaries, permit unauthorized writes, leak screenshot content, or introduce unexpected code execution in scripts. General UX and documentation problems should use the public issue templates.

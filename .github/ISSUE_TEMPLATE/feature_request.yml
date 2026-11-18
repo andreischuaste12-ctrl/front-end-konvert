@@ -1,50 +1,50 @@
-name: Propor uma melhoria
-description: Sugira uma capacidade, fluxo ou melhoria de documentação.
-title: "[Melhoria]: "
+name: Request an enhancement
+description: Suggest a capability, workflow, or documentation improvement.
+title: "[Enhancement]: "
 labels:
   - enhancement
 body:
   - type: dropdown
     id: component
     attributes:
-      label: Componente
+      label: Component
       options:
         - audit-frontend-designer-konvert
         - create-frontend-from-zero-konvert
         - design-por-referencia-konvert
-        - Documentação ou comunidade
-        - Novo componente
+        - Documentation or community files
+        - New component
     validations:
       required: true
   - type: textarea
     id: need
     attributes:
-      label: Necessidade
-      description: Qual tarefa ou problema motivou a proposta?
+      label: Need
+      description: What task or problem motivated this request?
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
-      label: Proposta
-      description: Descreva o comportamento desejado e como ele poderia ser verificado.
+      label: Proposal
+      description: Describe the desired behavior and how it could be verified.
     validations:
       required: true
   - type: textarea
     id: alternatives
     attributes:
-      label: Alternativas consideradas
+      label: Alternatives considered
   - type: textarea
     id: impact
     attributes:
-      label: Impacto e compatibilidade
-      description: Indique contratos, exemplos ou fluxos que podem ser afetados.
+      label: Impact and compatibility
+      description: Identify contracts, examples, or workflows that may be affected.
   - type: checkboxes
     id: checks
     attributes:
-      label: Confirmações
+      label: Confirmation
       options:
-        - label: Procurei propostas semelhantes nas issues existentes.
+        - label: I searched for similar requests in existing issues.
           required: true
-        - label: A proposta não depende de dados privados ou conteúdo de terceiros sem autorização.
+        - label: This proposal does not depend on private data or unauthorized third-party content.
           required: true

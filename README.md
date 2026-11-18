@@ -1,44 +1,43 @@
 # Front-end Konvert
 
-Coleção de skills para agentes de IA auditarem, criarem e refinarem interfaces web com evidências visuais, acessibilidade, privacidade e critérios verificáveis.
+A collection of AI agent skills for auditing, creating, and refining web interfaces with visual evidence, accessibility guidance, privacy safeguards, and verifiable acceptance criteria.
 
-[![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-green.svg)](LICENSE)
-[![Idioma](https://img.shields.io/badge/idioma-pt--BR-blue.svg)](#)
+[![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Node.js 20+](https://img.shields.io/badge/Node.js-20%2B-339933.svg)](https://nodejs.org/)
 
-## O que há neste repositório
+## What's included
 
-| Skill | Finalidade | Resultado principal |
+| Skill | Purpose | Primary output |
 | --- | --- | --- |
-| [`audit-frontend-designer-konvert`](audit-frontend-designer-konvert/) | Auditar uma interface existente sem alterar o projeto | Relatório estruturado em PDF, Markdown e JSON |
-| [`create-frontend-from-zero-konvert`](create-frontend-from-zero-konvert/) | Criar uma interface nova a partir de um brief | Frontend funcional com verificação renderizada |
-| [`design-por-referencia-konvert`](design-por-referencia-konvert/) | Refinar uma interface ou aplicar uma direção visual aprovada | Implementação acompanhada de evidências antes/depois |
+| [`audit-frontend-designer-konvert`](audit-frontend-designer-konvert/) | Audit an existing interface without modifying the target project | Structured PDF, Markdown, and JSON reports |
+| [`create-frontend-from-zero-konvert`](create-frontend-from-zero-konvert/) | Build a new interface from a product brief | Functional frontend with rendered verification |
+| [`design-por-referencia-konvert`](design-por-referencia-konvert/) | Refine an interface or apply an approved visual direction | Implementation backed by before-and-after evidence |
 
-As três skills formam um fluxo contínuo, mas também podem ser usadas separadamente:
+The three skills form a complete workflow, but each one can also be used independently:
 
-1. **Auditar:** identificar problemas e oportunidades com evidências.
-2. **Criar ou refinar:** implementar o escopo autorizado.
-3. **Verificar:** conferir estados, responsividade, acessibilidade e fidelidade no navegador.
+1. **Audit:** identify problems and opportunities using observable evidence.
+2. **Create or refine:** implement the authorized scope.
+3. **Verify:** check states, responsiveness, accessibility, and visual fidelity in a browser.
 
-## Princípios
+## Principles
 
-- evidência observável antes de conclusões;
-- separação clara entre auditoria e implementação;
-- decisões rastreáveis e critérios de aceite verificáveis;
-- respeito à privacidade, com dados sintéticos e artefatos fora do Git;
-- acessibilidade tratada durante todo o fluxo;
-- referências visuais usadas como orientação, sem copiar identidade ou conteúdo de terceiros.
+- draw conclusions from observable evidence;
+- keep read-only auditing separate from implementation;
+- make decisions traceable and acceptance criteria verifiable;
+- protect privacy with synthetic data and Git-ignored artifacts;
+- consider accessibility throughout the workflow;
+- use visual references as guidance without copying third-party identity or content.
 
-## Instalação
+## Installation
 
-Copie a pasta da skill desejada para o diretório de skills do agente:
+Copy the skill directory you need into your agent's skills directory:
 
-| Ferramenta | Projeto | Usuário |
+| Tool | Project-level path | User-level path |
 | --- | --- | --- |
-| Codex | `.agents/skills/<nome-da-skill>/` | `~/.agents/skills/<nome-da-skill>/` |
-| Claude Code | `.claude/skills/<nome-da-skill>/` | `~/.claude/skills/<nome-da-skill>/` |
+| Codex | `.agents/skills/<skill-name>/` | `~/.agents/skills/<skill-name>/` |
+| Claude Code | `.claude/skills/<skill-name>/` | `~/.claude/skills/<skill-name>/` |
 
-Para usar as ferramentas de navegador da skill de design por referência:
+To use the browser tooling included with the design-by-reference skill:
 
 ```bash
 cd design-por-referencia-konvert
@@ -46,20 +45,20 @@ npm ci
 npx playwright install chromium
 ```
 
-Reinicie ou atualize o agente após instalar uma skill para que ela seja detectada.
+Refresh or restart the agent after installation so it can discover the skill.
 
-## Uso responsável
+## Responsible use
 
-Use somente projetos, páginas e ambientes que você está autorizado a inspecionar. Evite produção quando uma ação puder gerar efeitos persistentes. Não inclua credenciais, sessões, dados pessoais ou capturas não revisadas em relatórios e commits.
+Only inspect projects, pages, and environments you are authorized to access. Prefer test environments whenever an action may create persistent effects. Never commit credentials, sessions, personal data, or unreviewed screenshots.
 
-Os artefatos de auditoria devem ficar em `.audit/`, que é ignorado por este repositório. Consulte as instruções específicas de cada skill antes de executar scripts de navegador.
+Audit artifacts should be written to `.audit/`, which is ignored by this repository. Read the selected skill's instructions before running browser scripts.
 
-## Desenvolvimento
+## Contributing
 
-Leia o [guia de contribuição](CONTRIBUTING.md) antes de enviar alterações. O projeto também possui [código de conduta](CODE_OF_CONDUCT.md), [política de segurança](SECURITY.md) e [declaração de acessibilidade](ACCESSIBILITY.md).
+Read the [contribution guide](CONTRIBUTING.md) before submitting changes. This project also provides a [Code of Conduct](CODE_OF_CONDUCT.md), [Security Policy](SECURITY.md), and [Accessibility Statement](ACCESSIBILITY.md).
 
-## Licença
+## License
 
-Distribuído sob a [Licença MIT](LICENSE).
+Released under the [MIT License](LICENSE).
 
 Copyright © 2026 Marcos Andrei Schuaste do Carmo.

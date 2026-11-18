@@ -1,17 +1,17 @@
-# Como contribuir
+# Contributing
 
-Obrigado pelo interesse em melhorar o Front-end Konvert.
+Thank you for your interest in improving Front-end Konvert.
 
-## Antes de começar
+## Before you begin
 
-1. Procure uma issue existente relacionada à mudança.
-2. Para alterações amplas de comportamento ou contrato, abra uma proposta antes da implementação.
-3. Não inclua credenciais, dados pessoais, conteúdo de clientes ou capturas não revisadas.
-4. Respeite o [Código de Conduta](CODE_OF_CONDUCT.md).
+1. Search for an existing issue related to your change.
+2. Open a proposal before implementing broad changes to behavior or public contracts.
+3. Do not include credentials, personal data, client content, or unreviewed screenshots.
+4. Follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
-## Preparação
+## Setup
 
-Faça um fork ou crie uma branch com um nome descritivo. Para trabalhar nas ferramentas da skill de design por referência, use Node.js 20 ou posterior:
+Create a fork or a branch with a descriptive name. Use Node.js 20 or later when working on the design-by-reference tooling:
 
 ```bash
 cd design-por-referencia-konvert
@@ -19,36 +19,36 @@ npm ci
 npx playwright install chromium
 ```
 
-## Padrões para mudanças
+## Change guidelines
 
-- mantenha as instruções em português claro;
-- preserve a separação entre auditoria somente leitura e implementação;
-- documente novos argumentos, formatos e limitações;
-- use dados sintéticos em exemplos e testes;
-- não enfraqueça validações de TLS, checksums ou proteções de rede;
-- mantenha caminhos e comandos compatíveis com o contexto descrito na skill;
-- atualize exemplos quando um contrato público mudar.
+- keep instructions clear and consistent with the surrounding documentation;
+- preserve the separation between read-only auditing and implementation;
+- document new arguments, formats, and limitations;
+- use synthetic data in examples and tests;
+- do not weaken TLS validation, checksums, or network safeguards;
+- keep paths and commands compatible with the environment described by the skill;
+- update examples whenever a public contract changes.
 
-## Validação
+## Validation
 
-Execute os checks definidos no componente alterado. Para `design-por-referencia-konvert`, os comandos esperados são:
+Run the checks defined by the component you changed. For `design-por-referencia-konvert`, the expected commands are:
 
 ```bash
 npm run check
 npm test
 ```
 
-Se algum check não puder ser executado, explique o motivo e o impacto no pull request. Não descreva uma verificação como concluída quando ela não foi executada.
+If a check cannot be run, explain why and describe the impact in the pull request. Never describe a check as passing when it was not executed.
 
 ## Pull requests
 
-Mantenha cada pull request focado em um objetivo. Inclua:
+Keep each pull request focused on one goal. Include:
 
-- o problema resolvido;
-- o comportamento anterior e o novo;
-- os arquivos ou contratos afetados;
-- as verificações executadas e seus resultados;
-- riscos, limitações ou pendências;
-- imagens somente quando ajudarem a avaliar uma mudança visual e estiverem revisadas para privacidade.
+- the problem being solved;
+- the previous and new behavior;
+- affected files or contracts;
+- checks performed and their results;
+- known risks, limitations, or follow-up work;
+- screenshots only when they help review a visual change and have been checked for private information.
 
-Ao contribuir, você concorda que sua contribuição será distribuída sob a [Licença MIT](LICENSE).
+By contributing, you agree that your contribution will be distributed under the [MIT License](LICENSE).

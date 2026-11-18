@@ -1,29 +1,29 @@
-# Código de Conduta
+# Code of Conduct
 
-## Nosso compromisso
+## Our commitment
 
-Queremos uma comunidade acolhedora, respeitosa e segura para todas as pessoas, independentemente de experiência, identidade, origem, aparência, condição, crença ou forma de participação.
+We are committed to providing a welcoming, respectful, and safe community for everyone, regardless of experience, identity, background, appearance, condition, beliefs, or form of participation.
 
-## Comportamentos esperados
+## Expected behavior
 
-- comunicar-se com respeito e empatia;
-- receber críticas técnicas de forma construtiva;
-- explicar decisões e discordâncias com base em evidências;
-- respeitar privacidade, autoria e propriedade intelectual;
-- ajudar a manter discussões focadas no projeto;
-- reconhecer erros e colaborar para corrigi-los.
+- communicate with respect and empathy;
+- receive technical feedback constructively;
+- explain decisions and disagreements using evidence;
+- respect privacy, authorship, and intellectual property;
+- keep discussions focused on the project;
+- acknowledge mistakes and collaborate on corrections.
 
-## Comportamentos inaceitáveis
+## Unacceptable behavior
 
-- assédio, intimidação, discriminação ou ataques pessoais;
-- linguagem sexualizada ou atenção sexual indesejada;
-- exposição de informações privadas sem autorização;
-- plágio ou uso indevido de conteúdo de terceiros;
-- abuso dos canais de issues, pull requests ou discussões;
-- qualquer conduta que torne a participação insegura.
+- harassment, intimidation, discrimination, or personal attacks;
+- sexualized language or unwanted sexual attention;
+- publishing private information without permission;
+- plagiarism or unauthorized use of third-party content;
+- abuse of issues, pull requests, or discussion channels;
+- any conduct that makes participation unsafe.
 
-## Aplicação
+## Enforcement
 
-Comportamentos inadequados podem ser reportados de forma privada pelos canais indicados na [política de segurança](SECURITY.md). Os responsáveis pelo projeto analisarão o contexto, preservarão a confidencialidade possível e poderão editar, ocultar ou remover contribuições, além de restringir temporária ou permanentemente a participação.
+Report inappropriate behavior privately through the channels described in the [Security Policy](SECURITY.md). Project maintainers will review the context, preserve confidentiality where possible, and may edit or remove contributions or restrict participation temporarily or permanently.
 
-Este código se aplica aos espaços do projeto e a situações públicas em que alguém represente oficialmente a comunidade.
+This code applies in project spaces and in public situations where someone officially represents the community.

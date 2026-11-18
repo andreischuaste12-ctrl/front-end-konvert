@@ -1,19 +1,19 @@
-## Objetivo
+## Goal
 
-Descreva o problema e a solução proposta.
+Describe the problem and the proposed solution.
 
-## Mudanças
+## Changes
 
 - 
 
-## Verificação
+## Verification
 
-- [ ] Executei os checks aplicáveis e registrei os resultados.
-- [ ] Atualizei documentação e exemplos afetados.
-- [ ] Usei somente dados sintéticos e revisei artefatos para privacidade.
-- [ ] Mantive a separação entre auditoria e implementação.
-- [ ] Confirmei que a mudança não inclui credenciais ou arquivos locais.
+- [ ] I ran the applicable checks and recorded their results.
+- [ ] I updated affected documentation and examples.
+- [ ] I used synthetic data and reviewed artifacts for private information.
+- [ ] I preserved the separation between auditing and implementation.
+- [ ] I confirmed that the change contains no credentials or local files.
 
-## Riscos e limitações
+## Risks and limitations
 
-Descreva impactos, verificações não executadas e pendências.
+Describe impacts, checks that were not run, and remaining work.
