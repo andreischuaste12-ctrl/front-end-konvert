@@ -105,9 +105,12 @@ export function failureMessage(error) {
 async function assertBrowserRuntime(browserScripts) {
   const common = path.resolve(browserScripts, '_common.mjs');
   if (!(await fs.access(common).then(() => true, () => false))) throw coded('BROWSER_SCRIPTS_MISSING');
-  for (const base of [common, path.join(process.cwd(), 'noop.js')]) {
-    try { createRequire(base).resolve('playwright'); return; } catch { /* try the next base */ }
-  }
+  try {
+    const packageRoot = await fs.realpath(path.dirname(path.resolve(browserScripts)));
+    const resolved = await fs.realpath(createRequire(common).resolve('playwright/package.json'));
+    const relative = path.relative(packageRoot, resolved);
+    if (relative && relative !== '..' && !relative.startsWith(`..${path.sep}`) && !path.isAbsolute(relative)) return;
+  } catch { /* use the named failure below */ }
   throw coded('PLAYWRIGHT_MISSING');
 }
 

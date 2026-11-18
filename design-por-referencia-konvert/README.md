@@ -26,8 +26,10 @@ A coding-agent skill for implementing approved audit findings, adapting a visual
 | `scripts/extract-styles.mjs` | Computed styles, CSS variables, fonts, type scale, estimated contrast, and target sizes. |
 | `scripts/image-manifest.mjs` | Static and rendered image inventory plus a visual-review guide. |
 | `scripts/_common.mjs` | Shared script utilities. |
+| `scripts/_network.mjs` and `scripts/_pinning.mjs` | Network policy and DNS-pinned local proxy. |
+| `scripts/_style-fields.mjs` | Stable measured-style comparison contract. |
 | `scripts/compare.mjs` | Measured-style differences and optional PNG comparison with diff images. |
-| `tests/` | Unit tests and local smoke tests for the three scripts. |
+| `tests/` | Unit, smoke, network-policy, and real-browser regression tests. |
 | `package.json` and `package-lock.json` | Minimal runtime, pinned Playwright dependency, and reproducible checks. |
 
 ## Requirements and validation
@@ -39,6 +41,7 @@ npm ci
 npx playwright install chromium
 npm run check
 npm test
+npm run test:browser
 ```
 
 The scripts prefer the skill's installed Playwright and fall back to the target project's installation. Browser-context WebSocket routing support is required; older project dependencies without that API are rejected rather than silently skipping network guards.

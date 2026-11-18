@@ -49,12 +49,16 @@ const { values: a } = parseArgs({
     help: { type: 'boolean', default: false },
   },
 });
-if (a.help || (!a.root && !a.url)) {
+if (a.help) {
   console.log(HELP);
-  process.exit(a.help ? 0 : 1);
+  process.exit(0);
 }
 if (a['save-images'] && a['no-save']) fail('Use --save-images ou --no-save, não ambos.');
 if (a['source-map'] && !a.root) fail('--source-map exige --root.');
+if (!a.root && !a.url) {
+  console.log(HELP);
+  process.exit(1);
+}
 const width = Number(a.width);
 if (a.url && (!Number.isInteger(width) || width < 200 || width > 4000)) fail('--width deve ser um inteiro entre 200 e 4000.');
 if (a.root) {

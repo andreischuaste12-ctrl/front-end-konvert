@@ -24,7 +24,7 @@ Estado: **execução parcial, uma rodada**. Não há estatística: um modelo, um
 | --- | --- | --- |
 | `validate-report.mjs --markdown` rejeitava Markdown com quebras de linha CRLF (todos os campos de texto "differ or missing") | `scripts/validate-report.mjs` | Corrigido; teste de regressão adicionado em `tests/validate-report.test.mjs` |
 | Diagnóstico errado, retratado: a falha da 1ª rota do `capture.mjs` (`ERR_BLOCKED_BY_CLIENT`) **não era defeito da captura**. O Git Bash (MSYS) convertia `--routes /index.html` em `C:/Program Files/Git/index.html`, e a proteção contra `file://` bloqueou a rota, o que é o comportamento correto. Só a primeira rota era afetada porque a conversão alcança o primeiro elemento da lista | `design-por-referencia-konvert/scripts/_common.mjs`, `capture.mjs` | Causa confirmada por instrumentação e reprodução. Melhoria feita: `resolveRoutes` falha cedo com mensagem explícita (teste de regressão em `tests/common.test.mjs`); nota sobre `MSYS_NO_PATHCONV=1` nas duas skills. Recaptura com o ambiente correto: índice `complete` |
-| A amostragem de contraste sinaliza o `li` pai em vez do link visível (1,16:1 em "Cafés"); o axe-core conta 4 falhas, a extração 5 | `extract-styles.mjs` | Tratado como limitação no relatório; **aberto** na ferramenta |
+| A amostragem de contraste sinaliza o `li` pai em vez do link visível (1,16:1 em "Cafés"); o axe-core conta 4 falhas, a extração 5 | `extract-styles.mjs` | Corrigido em 2026-11-18; teste de regressão com Chromium confirma que o texto do link pertence ao link e não ao `li` pai |
 | O PDF usa a localização do achado como título (o JSON não tem título curto) e a página 2 sai quase vazia por quebra de página | `render-client-pdf.mjs` | Corrigido na revisão de 2026-11-10 (abaixo) |
 
 Não revisei o PDF inteiro: foram abertas as páginas 1, 2, 3 e 10 (a página 9 apareceu parcialmente).
@@ -78,3 +78,20 @@ Mesmo método da execução acima, com o texto já alinhado (a `design-por-refer
 | 3 | audit-frontend-designer-konvert | Não | Sim, com `approved_for_implementation: false` | **Passou** |
 
 As três citaram a linha da `design-por-referencia` que remete "audite e corrija" à auditora. Os três planos perguntam rota, ambiente e aprovação antes de agir e não instalam dependências nem alteram o `.gitignore`. O avaliador não é cego (o mesmo agente que alinhou os textos), e o antes e o depois têm texto diferente, então não é comparação controlada.
+
+## Verificação de integridade do repositório — 2026-11-18
+
+Esta rodada reparou a instalação incompleta da executora e verificou os componentes localmente em Linux com Node.js 24, Playwright 1.64.1 e Chromium 156 do sistema. Não foi uma execução de casos de roteamento por um agente.
+
+| Verificação | Resultado |
+| --- | --- |
+| Descoberta da executora | `design-por-referencia-konvert/SKILL.md` presente, com frontmatter e fluxo de sete etapas |
+| Sintaxe da executora | `npm run check`: passou |
+| Testes unitários da executora | 13 de 13 passaram |
+| Testes smoke e de política de rede | 4 de 4 passaram |
+| Regressão de contraste em navegador real | 1 de 1 passou; somente o link de baixo contraste é marcado como falha |
+| Contratos e ferramentas da auditora | 33 de 33 passaram |
+| PDF com navegador real | 1 de 1 passou, incluindo recusa de sobrescrita |
+| Preparo isolado auditora → executora | passou; a executora completa é copiada sem escrever no projeto auditado |
+
+O CI reproduz checks, testes determinísticos, regressão de contraste e PDF real em cada push para `main` e em pull requests. Os casos de avaliação que exigem decisão de um agente continuam com o estado histórico documentado acima; esta rodada não os promove a “passou”.

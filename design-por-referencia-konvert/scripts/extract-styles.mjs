@@ -196,6 +196,25 @@ const data = await page.evaluate(
       walkText(root);
       return parts.join(' ');
     };
+    // A container may expose a descendant link's text through innerText while using a
+    // different computed color. Count text only when a real text node is rendered with
+    // the sampled element's typography and color; this avoids duplicate or false
+    // contrast failures on parents such as <li><a>...</a></li>.
+    const textUsesOwnStyle = (el, ownStyle) => {
+      const signature = (style) => [
+        style.color, style.fontFamily, style.fontSize, style.fontWeight,
+        style.lineHeight, style.letterSpacing, style.textTransform,
+      ].join('|');
+      const expected = signature(ownStyle);
+      const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+        if (!node.nodeValue?.trim()) continue;
+        const parent = node.parentElement;
+        if (!parent || isEditable(parent) || !visible(parent)) continue;
+        if (signature(getComputedStyle(parent)) === expected) return true;
+      }
+      return false;
+    };
     // Sampling hint only, not a full accessible-name computation. Never read field values.
     const labelHint = (el) => {
       const altNode = [...el.querySelectorAll('img[alt]')].find((img) => !isEditable(img));
@@ -252,7 +271,7 @@ const data = await page.evaluate(
         const ancestorOpacityProduct = Number(ancestorOpacityOf(el).toFixed(6));
         const opacityUncertain = ancestorOpacityProduct < 0.999;
         const fgOpaque = fg ? (fg[3] < 1 ? over(fg, bg.color) : fg) : null;
-        const hasRenderedText = !isEditable(el) && Boolean(nonEditableText(el).trim());
+        const hasRenderedText = !isEditable(el) && textUsesOwnStyle(el, s);
         const sig = [s.fontSize, s.fontWeight, s.lineHeight, s.fontFamily, s.color, hex(bg.color), bg.uncertain, ancestorOpacityProduct, hasRenderedText, s.borderRadius].join('|');
         // Controls without rendered text and editable fields stay inspectable but do not describe typography.
         if (hasRenderedText) {

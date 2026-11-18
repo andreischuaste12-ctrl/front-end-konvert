@@ -4,6 +4,7 @@ A collection of AI agent skills for auditing, creating, and refining web interfa
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Node.js 20+](https://img.shields.io/badge/Node.js-20%2B-339933.svg)](https://nodejs.org/)
+[![CI](https://github.com/andreischuaste12-ctrl/front-end-konvert/actions/workflows/ci.yml/badge.svg)](https://github.com/andreischuaste12-ctrl/front-end-konvert/actions/workflows/ci.yml)
 
 ## What's included
 
@@ -46,6 +47,10 @@ npx playwright install chromium
 ```
 
 Refresh or restart the agent after installation so it can discover the skill.
+
+## Language
+
+The repository overview and community files are maintained in English. The operational skill instructions and knowledge base are maintained in Brazilian Portuguese for their current primary audience; command names, schemas, and machine-readable contracts remain language-independent.
 
 ## Responsible use
 

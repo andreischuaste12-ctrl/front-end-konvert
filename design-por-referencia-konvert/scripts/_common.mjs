@@ -346,7 +346,9 @@ export function resolveRoutes(base, csv) {
 
 export function routeSlug(u) {
   const fileName = path.basename(u.pathname, path.extname(u.pathname));
-  const rawPath = u.protocol === 'file:' ? (fileName.toLowerCase() === 'index' ? 'home' : fileName) : u.pathname;
+  let decodedPath;
+  try { decodedPath = decodeURIComponent(u.pathname); } catch { decodedPath = u.pathname; }
+  const rawPath = u.protocol === 'file:' ? (fileName.toLowerCase() === 'index' ? 'home' : fileName) : decodedPath;
   const raw = (rawPath + (u.search ? '-q' : '')).replace(/^\/+|\/+$/g, '');
   const s = raw.replace(/[^a-zA-Z0-9]+/g, '-').replace(/^-|-$/g, '').toLowerCase();
   return s ? s.slice(0, 60) : 'home';

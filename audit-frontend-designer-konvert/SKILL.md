@@ -1,6 +1,6 @@
 ---
 name: audit-frontend-designer-konvert
-description: Audit an existing frontend as a read-only UX/UI design reviewer. Assess audience needs, user journeys, visual hierarchy, interaction patterns, accessibility as experienced in the interface, and evidence-informed design psychology; preserve strengths and produce a client-ready PDF plus a structured Markdown and JSON report. Use design-por-referencia-konvert for directly requested changes, visual reproduction, or approved implementation, and create-frontend-from-zero-konvert for a new interface. Not for SEO, Core Web Vitals, formal WCAG conformance, security, or code-review audits (use revisao-interface-web-konvert for code review of UI).
+description: Audit an existing frontend as a read-only UX/UI design reviewer. Assess audience needs, user journeys, visual hierarchy, interaction patterns, accessibility as experienced in the interface, and evidence-informed design psychology; preserve strengths and produce a client-ready PDF plus a structured Markdown and JSON report. Use design-por-referencia-konvert for directly requested changes, visual reproduction, or approved implementation, and create-frontend-from-zero-konvert for a new interface. Not for SEO, Core Web Vitals, formal WCAG conformance, security, or source-code review; use a dedicated review workflow for those tasks.
 ---
 
 # Auditoria de frontend (UX/UI)

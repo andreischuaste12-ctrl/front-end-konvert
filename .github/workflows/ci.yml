@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  executor:
+    name: Executor checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: design-por-referencia-konvert
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: design-por-referencia-konvert/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run check
+      - run: npm test
+
+  auditor:
+    name: Auditor contract tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run deterministic auditor tests
+        run: >-
+          node --test
+          audit-frontend-designer-konvert/tests/validate-report.test.mjs
+          audit-frontend-designer-konvert/tests/prepare-browser.test.mjs
+          audit-frontend-designer-konvert/tests/render-client-pdf.test.mjs
+
+  browser-pdf:
+    name: Real browser PDF test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: design-por-referencia-konvert
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: design-por-referencia-konvert/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npx playwright install --with-deps chromium
+      - name: Verify rendered style sampling
+        run: npm run test:browser
+      - name: Render a real PDF
+        working-directory: ${{ github.workspace }}
+        run: node --test audit-frontend-designer-konvert/tests/render-client-pdf.browser.test.mjs

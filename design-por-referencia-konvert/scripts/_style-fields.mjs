@@ -1,0 +1,28 @@
+// Stable, privacy-safe fields compared between measured style captures.
+// Identity fields (category and selector) are handled separately by compare.mjs.
+export const STYLE_FIELDS = Object.freeze([
+  'text',
+  'rect.x',
+  'rect.y',
+  'rect.w',
+  'rect.h',
+  'fontFamily',
+  'fontSize',
+  'fontWeight',
+  'lineHeight',
+  'letterSpacing',
+  'textTransform',
+  'color',
+  'background',
+  'backgroundIndeterminate',
+  'contrast',
+  'contrastRequired',
+  'contrastStatus',
+  'contrastOpacityIndeterminate',
+  'opacity',
+  'ancestorOpacityProduct',
+  'padding',
+  'borderRadius',
+  'boxShadow',
+  'count',
+]);
