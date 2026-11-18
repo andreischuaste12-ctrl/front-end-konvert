@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auditoria de Frontend UX/UI Konvert"
+  short_description: "Auditoria somente leitura de UX/UI com relatório em PDF, Markdown e JSON"
+  default_prompt: "Use $audit-frontend-designer-konvert para auditar este frontend como revisora de design somente leitura, com evidência renderizada, achados priorizados P0–P3 e relatório em PDF, Markdown e JSON; não implemente mudanças."

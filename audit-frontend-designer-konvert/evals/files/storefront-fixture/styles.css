@@ -1,0 +1,26 @@
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 system-ui,sans-serif;color:#222;background:#fff}
+a,button,input,select{outline:none}
+.top{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;background:#3b2a1e}
+.brand{color:#fff;font-weight:700;text-decoration:none}
+.menu{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+.menu a{color:#e8d9c8;text-decoration:none;font-size:13px}
+.has-sub{position:relative}
+.sub{display:none;position:absolute;top:100%;left:0;background:#3b2a1e;list-style:none;margin:0;padding:8px}
+.has-sub:hover .sub{display:block}
+.hero{padding:48px 24px;background:#f4ede4}
+.hero h1{margin:0 0 8px;font-size:32px}
+.lead{margin:0 0 16px;color:#777}
+.cta{display:inline-block;padding:10px 16px;background:#e6b84d;color:#fff;text-decoration:none;border-radius:4px;font-size:14px}
+.urgency{color:#c00;font-weight:700}
+.products{display:flex;gap:24px;flex-wrap:wrap;padding:24px}
+.card{width:320px}
+.card img{max-width:100%;height:auto}
+.price{font-weight:700;margin:4px 0}
+.price small{font-weight:400;color:#999}
+.buy{padding:6px 10px;border:0;background:#6b4f3a;color:#fff;font-size:12px;border-radius:3px}
+.news{padding:24px;background:#faf7f2}
+.news input{padding:6px;border:1px solid #ccc;width:220px}
+.go{padding:4px 8px;font-size:11px}
+footer{padding:16px 24px;font-size:12px;color:#aaa}
+@media (max-width:480px){.menu{gap:8px}.menu a{font-size:11px}.hero h1{font-size:26px}}
