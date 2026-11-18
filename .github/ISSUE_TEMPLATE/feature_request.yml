@@ -1,0 +1,50 @@
+name: Propor uma melhoria
+description: Sugira uma capacidade, fluxo ou melhoria de documentação.
+title: "[Melhoria]: "
+labels:
+  - enhancement
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Componente
+      options:
+        - audit-frontend-designer-konvert
+        - create-frontend-from-zero-konvert
+        - design-por-referencia-konvert
+        - Documentação ou comunidade
+        - Novo componente
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: Necessidade
+      description: Qual tarefa ou problema motivou a proposta?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+      description: Descreva o comportamento desejado e como ele poderia ser verificado.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impacto e compatibilidade
+      description: Indique contratos, exemplos ou fluxos que podem ser afetados.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmações
+      options:
+        - label: Procurei propostas semelhantes nas issues existentes.
+          required: true
+        - label: A proposta não depende de dados privados ou conteúdo de terceiros sem autorização.
+          required: true

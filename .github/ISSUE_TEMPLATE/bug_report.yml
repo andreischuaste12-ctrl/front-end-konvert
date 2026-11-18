@@ -1,0 +1,64 @@
+name: Relatar um problema
+description: Informe um comportamento incorreto ou uma falha reproduzível.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Obrigado por ajudar a melhorar o Front-end Konvert. Não inclua credenciais ou dados pessoais.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Componente
+      options:
+        - audit-frontend-designer-konvert
+        - create-frontend-from-zero-konvert
+        - design-por-referencia-konvert
+        - Documentação ou comunidade
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema
+      description: Explique o que aconteceu e por que o resultado parece incorreto.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Como reproduzir
+      description: Use um exemplo mínimo e dados sintéticos.
+      placeholder: |
+        1. Execute...
+        2. Informe...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Sistema operacional, versão do Node.js e agente utilizado, quando aplicável.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidências revisadas
+      description: Inclua logs ou imagens somente após remover dados privados.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmações
+      options:
+        - label: Procurei issues existentes sobre o mesmo problema.
+          required: true
+        - label: Removi credenciais e dados pessoais do relato.
+          required: true

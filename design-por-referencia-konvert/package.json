@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.1.0",
   "description": "Local tooling and validation for the design-by-reference agent skill",
+  "author": "Marcos Andrei Schuaste do Carmo",
+  "license": "MIT",
   "type": "module",
   "engines": {
     "node": ">=20"

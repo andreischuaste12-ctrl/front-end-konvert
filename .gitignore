@@ -1,0 +1,30 @@
+# Dependencies and generated output
+node_modules/
+.audit/
+
+# Environment files and local credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+credentials.json
+credentials.*.json
+secrets.json
+secrets.*.json
+
+# Private keys, certificates, and key stores
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+
+# Local databases that may contain user data
+*.db
+*.sqlite
+*.sqlite3
