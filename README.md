@@ -1,6 +1,6 @@
-# Front-end Konvert
+# Front-end Konvert: AI Agent Skills for Frontend Audits and UX/UI Design
 
-A collection of AI agent skills for auditing, creating, and refining web interfaces with visual evidence, accessibility guidance, privacy safeguards, and verifiable acceptance criteria.
+Open-source AI agent skills for frontend audits, UX/UI design, accessibility reviews, responsive interface implementation, and Playwright-based visual verification in Codex and Claude Code.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Node.js 20+](https://img.shields.io/badge/Node.js-20%2B-339933.svg)](https://nodejs.org/)
@@ -19,6 +19,15 @@ The three skills form a complete workflow, but each one can also be used indepen
 1. **Audit:** identify problems and opportunities using observable evidence.
 2. **Create or refine:** implement the authorized scope.
 3. **Verify:** check states, responsiveness, accessibility, and visual fidelity in a browser.
+
+## Use cases
+
+- run a read-only frontend UX/UI audit and produce client-ready reports;
+- create a landing page, storefront, dashboard, or application interface from a product brief;
+- implement approved audit findings without expanding the authorized scope;
+- adapt an existing frontend from a screenshot, URL, or written visual direction;
+- inspect responsive behavior, interface states, contrast, images, and computed styles;
+- compare rendered interfaces with repeatable Playwright evidence.
 
 ## Principles
 

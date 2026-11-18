@@ -3,6 +3,28 @@
   "private": true,
   "version": "0.1.0",
   "description": "Local tooling and validation for the design-by-reference agent skill",
+  "keywords": [
+    "ai-agents",
+    "frontend",
+    "frontend-audit",
+    "ux-design",
+    "ui-design",
+    "accessibility",
+    "playwright",
+    "codex",
+    "claude-code",
+    "design-systems",
+    "browser-automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreischuaste12-ctrl/front-end-konvert.git",
+    "directory": "design-por-referencia-konvert"
+  },
+  "homepage": "https://github.com/andreischuaste12-ctrl/front-end-konvert#readme",
+  "bugs": {
+    "url": "https://github.com/andreischuaste12-ctrl/front-end-konvert/issues"
+  },
   "author": "Marcos Andrei Schuaste do Carmo",
   "license": "MIT",
   "type": "module",
